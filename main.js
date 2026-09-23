@@ -42,7 +42,7 @@ export const authMiddleware = (req, res, next) => {
 
 connectDB().then(() => {
     app.use(express.json());
-    app.user(authMiddleware);
+    app.use(authMiddleware);
     app.use(rt);
     app.listen(8080);
 }).catch(() => {
